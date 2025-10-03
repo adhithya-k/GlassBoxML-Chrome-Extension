@@ -34,13 +34,4 @@
 - **Decision rules**: **OneR** over discretized bins to yield human-readable if-then rules.
 - **Clustering explainability**: variance across centroid coordinates → which features separate clusters.
 
-## SOP talking points (Stanford-level)
-- **Motivation**: Data is abundant on the web but trapped behind formatting, know-how, or compute barriers. I built an *on-device GlassBoxML* that lets anyone import tables in one click and get **reliable, interpretable models** in seconds.
-- **Technical novelty**: Zero-server, privacy-preserving ML implemented in the browser; automatic numeric feature detection, standardization, **permutation importance**, and rule-based explanations; robust table scraping and CSV ingestion; model export for reproducibility.
-- **Impact**: Democratizes modeling for students/journalists/researchers evaluating claims on the fly; enables rapid **what-if** exploration without Python/Colab.
-- **Future work**: Swap training backends to **TensorFlow.js** for GPU acceleration; add **decision trees & SHAP**; integrate **cross-validation**, **multiclass**, **auto-type inference**, and an **explanatory report** generator.
-- **Ethics & privacy**: All processing is local; no data ever leaves the browser. Features encourage transparency (rules, importances) and prevent blind automation.
-
----
-
-© You, MIT-licensed (add a LICENSE file if needed)
+CENSE file if needed)
