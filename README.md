@@ -33,5 +33,3 @@
 - **Feature importance** via (a) absolute weights (for linear/logistic) and (b) **permutation importance** (metric drop when shuffling a feature).
 - **Decision rules**: **OneR** over discretized bins to yield human-readable if-then rules.
 - **Clustering explainability**: variance across centroid coordinates → which features separate clusters.
-
-CENSE file if needed)
