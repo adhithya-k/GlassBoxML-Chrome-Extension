@@ -1,0 +1,109 @@
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>AutoML Lite</title>
+  <link rel="stylesheet" href="styles/popup.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>AutoML Lite</h1>
+      <p>In-browser ML: classification, regression, clustering — with interpretable insights.</p>
+    </header>
+
+    <section class="card">
+      <h2>1) Load Data</h2>
+      <div class="grid two">
+        <div>
+          <button id="btn-scrape">Import from page tables</button>
+          <p id="scrape-status" class="muted"></p>
+        </div>
+        <div>
+          <input id="csv-file" type="file" accept=".csv" />
+          <p class="muted">Upload CSV (first row = headers)</p>
+        </div>
+      </div>
+      <div id="dataset-meta" class="muted"></div>
+      <div id="table-container"></div>
+    </section>
+
+    <section class="card">
+      <h2>2) Configure Task</h2>
+      <div class="grid two">
+        <div>
+          <label>Task</label>
+          <select id="task">
+            <option value="classification">Classification</option>
+            <option value="regression">Regression</option>
+            <option value="clustering">Clustering (k-means)</option>
+          </select>
+        </div>
+        <div id="target-wrap">
+          <label>Target (y)</label>
+          <select id="target"></select>
+        </div>
+      </div>
+      <div class="grid two">
+        <div>
+          <label>Numeric Features (auto-detected)</label>
+          <div id="feature-list" class="chips"></div>
+        </div>
+        <div id="kmeans-wrap" style="display:none;">
+          <label>k (clusters)</label>
+          <input id="k" type="number" min="2" max="10" value="3">
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>3) Train</h2>
+      <div class="grid two">
+        <div>
+          <button id="btn-train">Train Model</button>
+          <p id="train-status" class="muted"></p>
+        </div>
+        <div>
+          <label>Train/Test Split (%)</label>
+          <input id="split" type="number" min="50" max="90" value="80">
+        </div>
+      </div>
+      <div id="metrics"></div>
+    </section>
+
+    <section class="card">
+      <h2>4) Interpretability</h2>
+      <div class="grid two">
+        <div>
+          <h3>Feature Importance</h3>
+          <div id="feat-imp"></div>
+        </div>
+        <div>
+          <h3>Decision Rules</h3>
+          <div id="rules"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>5) Predictions</h2>
+      <div class="grid two">
+        <div>
+          <textarea id="predict-input" placeholder='Enter JSON object: {"f1": 1.2, "f2": 3}...'></textarea>
+          <button id="btn-predict">Predict</button>
+        </div>
+        <div>
+          <pre id="predict-output"></pre>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <button id="btn-export">Export Model (JSON)</button>
+      <span id="export-status" class="muted"></span>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
