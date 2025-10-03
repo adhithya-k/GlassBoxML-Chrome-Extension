@@ -1,5 +1,5 @@
 
-# AutoML Lite in the Browser (Chrome Extension)
+# GlassBoxML in the Browser (Chrome Extension)
 
 **What it does**
 - Load data from **HTML tables** on any web page or **CSV uploads**.
@@ -12,7 +12,7 @@
 ## How to load
 1. Download the `MLExtension.zip` and extract the `MLExtension/` folder.
 2. Open **chrome://extensions** → toggle **Developer mode** → **Load unpacked** → select the extracted `MLExtension` folder.
-3. Pin **AutoML Lite** from the extensions toolbar.
+3. Pin **GlassBoxML** from the extensions toolbar.
 
 ## Quick demo
 1. Open any page with a data table (e.g., Wikipedia table).
@@ -35,7 +35,7 @@
 - **Clustering explainability**: variance across centroid coordinates → which features separate clusters.
 
 ## SOP talking points (Stanford-level)
-- **Motivation**: Data is abundant on the web but trapped behind formatting, know-how, or compute barriers. I built an *on-device AutoML* that lets anyone import tables in one click and get **reliable, interpretable models** in seconds.
+- **Motivation**: Data is abundant on the web but trapped behind formatting, know-how, or compute barriers. I built an *on-device GlassBoxML* that lets anyone import tables in one click and get **reliable, interpretable models** in seconds.
 - **Technical novelty**: Zero-server, privacy-preserving ML implemented in the browser; automatic numeric feature detection, standardization, **permutation importance**, and rule-based explanations; robust table scraping and CSV ingestion; model export for reproducibility.
 - **Impact**: Democratizes modeling for students/journalists/researchers evaluating claims on the fly; enables rapid **what-if** exploration without Python/Colab.
 - **Future work**: Swap training backends to **TensorFlow.js** for GPU acceleration; add **decision trees & SHAP**; integrate **cross-validation**, **multiclass**, **auto-type inference**, and an **explanatory report** generator.
