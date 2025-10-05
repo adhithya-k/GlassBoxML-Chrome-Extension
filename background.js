@@ -1,4 +1,4 @@
 
 chrome.runtime.onInstalled.addListener(() => {
-  console.log("AutoML Lite installed.");
+  console.log("GlassBoxML installed.");
 });
