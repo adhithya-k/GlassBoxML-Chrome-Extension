@@ -1,10 +1,10 @@
 {
   "manifest_version": 3,
-  "name": "AutoML Lite in the Browser",
+  "name": "GlassboxML in the Browser",
   "description": "Select a dataset (HTML tables, CSV), build quick models (classification, regression, clustering) fully in-browser with interpretable outputs.",
   "version": "1.0.0",
   "action": {
-    "default_title": "AutoML Lite",
+    "default_title": "GlassboxML",
     "default_popup": "popup.html"
   },
   "permissions": [
